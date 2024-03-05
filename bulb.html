@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULB</title>
+</head>
+<style>
+     .btn{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 10px;
+       border: 1px;
+        border-radius:2px ;
+        background-color: blueviolet;
+     }
+       .center{
+        display: block;
+        margin-left:auto;
+        margin-top:auto;
+        margin-right: auto;
+      }
+</style>
+
+<body style="background-color: black;">
+    <img  id="bulb" class="center" src="bulb off.jpg" alt="jo marzi" height="500px">
+    <button id="toggle btn" class="center btn">ON KAR/OFF KAR</button>
+    <script>
+      let btn=document.getElementById('toggle btn')
+      let bulb=document.getElementById('bulb')
+      document.addEventListener('click',togglebulb)
+      function togglebulb(e){
+        if(btn.textContent.includes('ON'))
+       { bulb.src ="bulbon.jpg"
+        btn.textContent="OFF KAR"}
+        else{
+          bulb.src ="bulb off.jpg"
+          btn.textContent="ON KAR"
+        }
+      }
+    </script>
+   
+</body>
+</html>
